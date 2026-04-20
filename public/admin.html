@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard – Chainsaws Climbing Class</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <header class="site-header admin-header">
+    <div class="logo">
+      <span class="logo-mark">🛠️</span>
+      <span class="logo-text">Admin – Chainsaws Climbing Class</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Back to Site</a>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="section">
+      <h2>Student Reservations</h2>
+      <p>View and manage all students who reserved a spot.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Session</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody id="students-table-body">
+          <!-- Populated by admin.js from localStorage / API -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section section-alt">
+      <h2>Lesson Content</h2>
+      <p>Add/update lesson videos and written guides for your students.</p>
+
+      <form id="lesson-form" class="card">
+        <div class="form-row">
+          <label for="lesson-title">Lesson Title</label>
+          <input id="lesson-title" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="lesson-type">Type</label>
+          <select id="lesson-type" required>
+            <option value="">Select type</option>
+            <option value="video">Video (YouTube / Vimeo URL)</option>
+            <option value="guide">Written Guide</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="lesson-url">Video URL (if video)</label>
+          <input id="lesson-url" type="url" placeholder="https://..." />
+        </div>
+
+        <div class="form-row">
+          <label for="lesson-body">Guide Text (if written)</label>
+          <textarea id="lesson-body" rows="4" placeholder="Write your guide here..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <input type="checkbox" id="lesson-public" />
+            Make this lesson visible on the public site
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">Save Lesson</button>
+        <p id="lesson-message" class="form-message"></p>
+      </form>
+
+      <div class="lesson-list" id="lesson-list">
+        <!-- Admin view of lessons -->
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Amazon Gear Logic (Later)</h2>
+      <p>
+        Here you’ll eventually add the script that takes a customer gear selection and
+        automatically places the order through your Amazon account. For now, this is just
+        a placeholder so we don’t forget the feature.
+      </p>
+      <pre class="code-block">
+// TODO: Implement Amazon order automation
+// 1. Capture selected gear + customer info
+// 2. Authenticate to your Amazon account (API / automation layer)
+// 3. Place order programmatically
+// 4. Store order record in your database
+      </pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="admin-year"></span> Chainsaws Climbing Class.</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
