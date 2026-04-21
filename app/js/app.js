@@ -29,7 +29,7 @@ function showLoginView(root) {
     });
 
     if (!res.ok) {
-      alert("Login failed. Make sure you signed up on the website.");
+      alert("Login failed. Make sure you signed up for a class.");
       return;
     }
 
@@ -86,7 +86,7 @@ function renderDashboard(data) {
   const discounts = Math.floor(data.videosCompleted / 5);
   const discountText = discounts > 0
     ? `${discounts} × 30% off live class`
-    : "No discounts yet — complete 5 videos to unlock 30% off.";
+    : "Complete 5 videos to unlock 30% off a live class.";
   root.querySelector('[data-bind="discount"]').textContent = discountText;
 
   const tabs = root.querySelector(".tabs");
@@ -124,7 +124,6 @@ function renderLessons(container, data) {
   list.addEventListener("click", async (e) => {
     if (!e.target.matches("button[data-lesson-id]")) return;
     const lessonId = e.target.getAttribute("data-lesson-id");
-    // In real flow, open video player; here we just mark as watched
     await markVideoWatched(lessonId);
     await loadDashboard();
   });
