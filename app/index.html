@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <title>Tree Climbing Training App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- PWA -->
   <link rel="manifest" href="/app/manifest.json" />
   <link rel="stylesheet" href="/app/app.css" />
 </head>
@@ -16,31 +14,22 @@
     <button id="installPwaBtn" class="btn secondary" style="display:none;">Install App</button>
   </header>
 
-  <!-- JS renders everything here -->
   <main id="appRoot"></main>
 
-  <!-- LOGIN VIEW -->
   <template id="loginView">
     <section class="view">
       <h2>Sign In</h2>
-      <p>Use the email you signed up with on the website.</p>
-
+      <p>Use the email you signed up with.</p>
       <form id="appLoginForm">
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-
+        <label>Email <input type="email" name="email" required /></label>
         <button type="submit" class="btn primary">Continue</button>
       </form>
     </section>
   </template>
 
-  <!-- DASHBOARD VIEW -->
   <template id="dashboardView">
     <section class="view">
       <h2>Welcome, <span data-bind="name"></span></h2>
-
       <p>City: <span data-bind="city"></span></p>
       <p>Videos completed: <span data-bind="videosCompleted"></span></p>
       <p>Live class discount: <span data-bind="discount"></span></p>
@@ -55,7 +44,6 @@
     </section>
   </template>
 
-  <!-- JS -->
-  <script src="/app/app.js"></script>
+  <script src="/app/js/app.js"></script>
 </body>
 </html>
