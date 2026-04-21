@@ -2,204 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chainsaws Climbing Class</title>
+  <title>Tree Climbing Classes & Training App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">
-      <span class="logo-mark">⛰️</span>
-      <span class="logo-text">Chainsaws Climbing Class</span>
-    </div>
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#curriculum">What You’ll Learn</a>
-      <a href="#booking">Reserve a Spot</a>
-      <a href="#gear">Tree Gear</a>
-      <a href="admin.html" class="admin-link">Admin</a>
-    </nav>
+    <h1>Learn Professional Tree Climbing</h1>
+    <p>Hands-on classes in Atlanta + a training app that tracks your progress.</p>
+    <a href="#signup" class="btn primary">Sign Up for a Class</a>
+    <a href="/app-info.html" class="btn secondary">Learn About the App</a>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Learn Professional Tree Climbing—Safely.</h1>
-        <p>
-          Chainsaws Climbing Class is a weekly, hands-on training where you learn
-          real-world tree climbing skills, safety systems, and professional techniques.
-        </p>
-        <p class="hero-price">
-          <strong>Class price:</strong> $150 per session • <strong>Reservation deposit:</strong> $40 (applied to your class)
-        </p>
-        <a href="#booking" class="btn-primary">Reserve Your Spot</a>
-      </div>
-    </section>
+  <section class="section">
+    <h2>In-Person Classes (Atlanta)</h2>
+    <p>You’ll learn knots, safety, gear, and real climbing techniques in live sessions.</p>
+    <ul>
+      <li>Small group or 1-on-1</li>
+      <li>All essential knots and safety</li>
+      <li>Gear recommendations and setup</li>
+    </ul>
+  </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About the Class</h2>
-      <p>
-        This class is built for people who want to climb trees the way working arborists do:
-        safely, professionally, and with confidence. You’ll learn how to move in the tree,
-        trust your gear, and never climb “sketchy”.
-      </p>
-      <p>
-        We meet <strong>once a week</strong>. Each session is focused on safety, technique,
-        and repetition until it feels natural.
-      </p>
-    </section>
+  <section class="section" id="signup">
+    <h2>Reserve Your Spot</h2>
+    <form id="classSignupForm">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Phone
+        <input type="tel" name="phone" required />
+      </label>
+      <label>
+        City
+        <select name="city" id="citySelect">
+          <!-- JS will populate available cities (Atlanta + others from admin) -->
+        </select>
+      </label>
+      <button type="submit" class="btn primary">Sign Up for Class</button>
+    </form>
+    <p class="note">
+      You’ll get access to the training app after signup so you can start learning before class.
+    </p>
+  </section>
 
-    <!-- CURRICULUM -->
-    <section id="curriculum" class="section section-alt">
-      <h2>What You’ll Learn</h2>
-
-      <div class="grid-2">
-        <div>
-          <h3>Essential Knots</h3>
-          <p>You’ll learn the most used and most important knots in tree work, including:</p>
-          <ul>
-            <li>Running Bowline</li>
-            <li>Blake’s Hitch / Prusik</li>
-            <li>Figure 8 on a Bight</li>
-            <li>Clove Hitch</li>
-            <li>Half Hitch &amp; Timber Hitch</li>
-          </ul>
-          <p>
-            We don’t just name them—you’ll tie them until you can do it with your eyes closed,
-            and understand when and why to use each one.
-          </p>
-        </div>
-
-        <div>
-          <h3>Gear &amp; Body Positioning</h3>
-          <ul>
-            <li><strong>Spikes &amp; Buckstrap:</strong> How to attach, adjust, and move safely.</li>
-            <li><strong>Body Positioning:</strong> How to balance, lean, and rest in the tree.</li>
-            <li><strong>Two-Point Technique:</strong> Always tied in twice—never hanging by one point.</li>
-            <li><strong>Climbing Line / “Life Line”:</strong> Why it’s your most important piece of gear.</li>
-          </ul>
-          <p>
-            You’ll learn how to feel safe in the tree, not just “hope” you’re safe.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section id="booking" class="section">
-      <h2>Reserve Your Spot</h2>
-      <p>
-        A <strong>$40 deposit</strong> reserves your spot and goes toward your
-        <strong>$150 class</strong>. After you submit, you’ll get a confirmation email with next steps.
-      </p>
-
-      <form id="booking-form" class="card">
-        <div class="form-row">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" required />
-        </div>
-
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-        </div>
-
-        <div class="form-row">
-          <label for="phone">Phone Number</label>
-          <input id="phone" name="phone" type="tel" required />
-        </div>
-
-        <div class="form-row">
-          <label for="session">Preferred Day / Session</label>
-          <select id="session" name="session" required>
-            <option value="">Select a weekly session</option>
-            <option value="Saturday 9AM">Saturday 9AM</option>
-            <option value="Saturday 1PM">Saturday 1PM</option>
-            <option value="Sunday 9AM">Sunday 9AM</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <p class="price-note">
-            You’ll be charged <strong>$40</strong> to reserve. The remaining <strong>$110</strong> is due at class.
-          </p>
-        </div>
-
-        <!-- PAYMENT PLACEHOLDER -->
-        <div class="form-row">
-          <button type="submit" class="btn-primary">Pay $40 &amp; Reserve</button>
-        </div>
-
-        <p id="booking-message" class="form-message"></p>
-      </form>
-    </section>
-
-    <!-- GEAR -->
-    <section id="gear" class="section section-alt">
-      <h2>Recommended Tree Gear</h2>
-      <p>
-        These are gear items I actually use or recommend. When you click and buy, you’re
-        ordering directly from Amazon. Later, I’ll automate ordering through my own account,
-        but for now you’ll just buy normally.
-      </p>
-
-      <div class="gear-grid">
-        <article class="gear-item card">
-          <h3>Climbing Spikes</h3>
-          <p>Durable spikes for tree climbing with adjustable straps.</p>
-          <a href="https://www.amazon.com/s?k=tree+climbing+spikes" target="_blank" class="btn-secondary">
-            View Spikes on Amazon
-          </a>
-        </article>
-
-        <article class="gear-item card">
-          <h3>Buckstrap / Flipline</h3>
-          <p>Adjustable buckstrap to position yourself around the tree safely.</p>
-          <a href="https://www.amazon.com/s?k=tree+climbing+flipline" target="_blank" class="btn-secondary">
-            View Buckstraps on Amazon
-          </a>
-        </article>
-
-        <article class="gear-item card">
-          <h3>Climbing Line / Lifeline</h3>
-          <p>Rated climbing rope designed for arborist work.</p>
-          <a href="https://www.amazon.com/s?k=arborist+climbing+rope" target="_blank" class="btn-secondary">
-            View Lifelines on Amazon
-          </a>
-        </article>
-
-        <article class="gear-item card">
-          <h3>Saddles &amp; Harnesses</h3>
-          <p>Comfortable harnesses for long days in the tree.</p>
-          <a href="https://www.amazon.com/s?k=arborist+harness" target="_blank" class="btn-secondary">
-            View Harnesses on Amazon
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- MEDIA / LESSON GUIDES -->
-    <section id="media" class="section">
-      <h2>Videos &amp; Lesson Guides</h2>
-      <p>
-        As the class grows, this section will hold your knot-tying videos, gear walkthroughs,
-        and written guides. You’ll manage these from your admin dashboard and keep everything
-        versioned in GitHub.
-      </p>
-
-      <div id="public-lessons" class="lesson-list">
-        <!-- Populated from admin-managed data later -->
-        <p class="muted">No public lesson videos yet. Check back soon.</p>
-      </div>
-    </section>
-  </main>
+  <section class="section">
+    <h2>The Training App</h2>
+    <p>
+      Track your knots, lessons, and progress. After every 5 videos you complete,
+      you unlock <strong>30% off</strong> a live class.
+    </p>
+    <a href="/app-info.html" class="btn secondary">How the App Works</a>
+  </section>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Chainsaws Climbing Class. All rights reserved.</p>
+    <p>Install the app from the App page to keep your training on your home screen.</p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="/site.js"></script>
 </body>
 </html>
