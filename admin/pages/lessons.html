@@ -10,15 +10,20 @@
 
 <header class="admin-header">
   <h1>Lessons</h1>
-  <a href="/admin/">Back to Dashboard</a>
+  <nav>
+    <a href="/admin/pages/index.html">Dashboard</a>
+    <a href="/admin/pages/students.html">Students</a>
+    <a href="/admin/pages/cities.html">Cities</a>
+    <a href="/admin/pages/reservations.html">Reservations</a>
+  </nav>
 </header>
 
 <main class="section">
-  <h2>Add Lesson</h2>
+  <h2>Add New Lesson</h2>
   <form id="addLessonForm">
     <label>Title <input type="text" name="title" required /></label>
     <label>Description <textarea name="description"></textarea></label>
-    <label>Video Upload <input type="file" name="video" /></label>
+    <label>Video File <input type="file" name="video" /></label>
     <button type="submit" class="btn primary">Add Lesson</button>
   </form>
 
@@ -26,6 +31,6 @@
   <div id="lessonsList"></div>
 </main>
 
-<script src="/admin/lessons.js"></script>
+<script src="/admin/js/lessons.js"></script>
 </body>
 </html>
