@@ -1,0 +1,132 @@
+/* ===========================
+   APP (PWA) THEME
+   =========================== */
+
+:root {
+  --bg: #000;
+  --panel: #111;
+  --accent: #00e676;
+  --accent-dark: #00b35a;
+  --text: #fff;
+  --text-muted: #aaa;
+  --radius: 14px;
+  --shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.app-header {
+  background: var(--panel);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+#installPwaBtn {
+  margin-top: 15px;
+}
+
+/* MAIN */
+#appRoot {
+  padding: 20px;
+}
+
+/* VIEW CONTAINERS */
+.view {
+  background: var(--panel);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* FORMS */
+form label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: none;
+  background: #222;
+  color: var(--text);
+  font-size: 16px;
+}
+
+/* BUTTONS */
+.btn,
+button {
+  background: var(--accent);
+  color: #000;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover,
+button:hover {
+  background: var(--accent-dark);
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tabs button {
+  flex: 1;
+  background: #222;
+  color: var(--text);
+  padding: 12px;
+  border-radius: var(--radius);
+}
+
+.tabs button:hover {
+  background: #333;
+}
+
+/* LESSON CARDS */
+.lesson-card,
+.class-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  box-shadow: var(--shadow);
+}
+
+.lesson-card h3,
+.class-card h4 {
+  margin: 0 0 10px 0;
+}
+
+/* PROGRESS */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
