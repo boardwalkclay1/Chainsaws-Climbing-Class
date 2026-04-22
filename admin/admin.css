@@ -1,0 +1,130 @@
+/* ===========================
+   ADMIN DASHBOARD THEME
+   =========================== */
+
+:root {
+  --bg: #0d0d0d;
+  --panel: #1a1a1a;
+  --accent: #00c853;
+  --accent-dark: #00963e;
+  --text: #f2f2f2;
+  --text-muted: #999;
+  --border: #333;
+  --radius: 12px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.admin-header {
+  background: var(--panel);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.admin-header nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.admin-header nav a:hover {
+  color: var(--accent);
+}
+
+/* MAIN */
+.section {
+  padding: 30px;
+}
+
+/* CARDS / ROWS */
+.student-row,
+.lesson-row,
+.city-row,
+.reservation-row {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.student-row button.link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.student-row button.link:hover {
+  color: var(--accent-dark);
+}
+
+/* FORMS */
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #111;
+  color: var(--text);
+  font-size: 15px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* BUTTONS */
+.btn,
+button {
+  background: var(--accent);
+  color: #000;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover,
+button:hover {
+  background: var(--accent-dark);
+}
+
+/* HEADERS */
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+}
