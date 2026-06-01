@@ -1,18 +1,40 @@
+/* ============================================================
+   REAL TREE GUY OS — TREE CLIMBING CLASS THEME
+   Dark • Forest • Bark • Chainsaw Orange • Neon Green Glow
+   ============================================================ */
+
 :root {
-  --bg: #1b1a17;
-  --bg-alt: #25231f;
-  --accent: #3f7d20;
-  --accent-soft: #4f9a2a;
-  --accent-dark: #2b5516;
-  --text: #f5f3e9;
-  --muted: #b0a89a;
-  --card-bg: #2a2722;
-  --border: #3a362f;
-  --danger: #c0392b;
-  --radius: 8px;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --bg: #0c0d0a; /* deep forest */
+  --bg-alt: #13140f;
+  --panel: #1a1c15;
+  --card-bg: #1f2118;
+
+  --bark: #3a2f1f; /* brown bark */
+  --bark-dark: #2a2217;
+
+  --accent: #ff7a00; /* chainsaw orange */
+  --accent-glow: #ff9d3b;
+  --accent-dark: #cc5f00;
+
+  --leaf: #3dd65c; /* neon canopy green */
+  --leaf-soft: #2fb94a;
+  --leaf-dark: #1f7f31;
+
+  --text: #f3f2e8;
+  --muted: #a9a38f;
+
+  --danger: #d64545;
+
+  --radius: 20px; /* bubble */
+  --radius-sm: 14px;
+
+  --shadow: 0 0 25px rgba(0,0,0,0.55);
+  --shadow-soft: 0 0 15px rgba(0,0,0,0.35);
+
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+
+/* RESET ------------------------------------------------------ */
 
 *,
 *::before,
@@ -23,23 +45,27 @@
 body {
   margin: 0;
   font-family: var(--font-main);
-  background: radial-gradient(circle at top, #2f3b22 0, #0f0e0b 55%, #050403 100%);
+  background: radial-gradient(circle at top, #1d2415 0%, #050503 60%, #000 100%);
   color: var(--text);
+  background-image: url('/img/textures/bark-dark.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* Layout */
+/* HEADER ----------------------------------------------------- */
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5vw;
-  background: rgba(10, 9, 7, 0.95);
-  border-bottom: 1px solid var(--border);
+  background: rgba(20, 18, 14, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   position: sticky;
   top: 0;
-  z-index: 10;
-  backdrop-filter: blur(10px);
+  z-index: 20;
+  box-shadow: 0 0 18px rgba(0,0,0,0.6);
 }
 
 .logo {
@@ -47,83 +73,70 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  color: var(--leaf);
+  text-shadow: 0 0 10px rgba(61,214,92,0.6);
 }
 
-.logo-mark {
-  font-size: 1.4rem;
-}
-
-.logo-text {
-  text-transform: uppercase;
-  font-size: 0.95rem;
-}
+/* NAV -------------------------------------------------------- */
 
 .main-nav a {
   color: var(--muted);
   text-decoration: none;
   margin-left: 1rem;
   font-size: 0.9rem;
+  transition: 0.2s ease;
 }
 
 .main-nav a:hover {
-  color: var(--accent-soft);
+  color: var(--leaf);
+  text-shadow: 0 0 8px rgba(61,214,92,0.6);
 }
 
-.admin-link {
-  border: 1px solid var(--accent);
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-}
-
-main {
-  padding: 2rem 5vw 4rem;
-}
-
-/* Hero */
+/* HERO ------------------------------------------------------- */
 
 .hero {
   min-height: 55vh;
   display: flex;
   align-items: center;
-}
-
-.hero-content {
-  max-width: 640px;
+  padding: 2rem 0;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  text-shadow: 0 0 14px rgba(255,122,0,0.55);
 }
 
 .hero p {
   max-width: 560px;
+  color: var(--muted);
 }
 
 .hero-price {
   margin-top: 1rem;
-  color: var(--accent-soft);
+  color: var(--leaf);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(61,214,92,0.5);
 }
 
-/* Sections */
+/* SECTIONS --------------------------------------------------- */
 
 .section {
   margin-top: 3rem;
 }
 
 .section-alt {
-  background: rgba(15, 14, 11, 0.8);
-  margin: 3rem -5vw 0;
+  background: rgba(20, 18, 14, 0.75);
   padding: 3rem 5vw;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  margin: 3rem -5vw 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
 }
 
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
+/* GRID ------------------------------------------------------- */
 
 .grid-2 {
   display: grid;
@@ -131,195 +144,117 @@ main {
   gap: 2rem;
 }
 
-/* Cards & Buttons */
+/* CARDS ------------------------------------------------------ */
 
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.05);
   box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  background-image: url('/img/textures/bark-light.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+  transition: 0.25s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(255,122,0,0.4);
+}
+
+/* BUTTONS — BUBBLE ------------------------------------------ */
 
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.4rem;
   border-radius: 999px;
-  border: none;
-  cursor: pointer;
   font-weight: 600;
   font-size: 0.95rem;
+  cursor: pointer;
   text-decoration: none;
-  text-align: center;
+  transition: 0.25s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-soft), var(--accent-dark));
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: #fff;
+  box-shadow: 0 0 14px rgba(255,122,0,0.45);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--accent-soft), #63c132);
+  background: linear-gradient(135deg, var(--accent-glow), var(--accent));
+  box-shadow: 0 0 20px rgba(255,157,59,0.6);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--accent-soft);
-  border: 1px solid var(--accent-soft);
+  background: rgba(61,214,92,0.12);
+  color: var(--leaf);
+  border: 1px solid var(--leaf);
 }
 
 .btn-secondary:hover {
-  background: rgba(79, 154, 42, 0.1);
+  background: rgba(61,214,92,0.22);
+  box-shadow: 0 0 12px rgba(61,214,92,0.4);
 }
 
-/* Forms */
-
-.form-row {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 0.9rem;
-}
+/* FORMS — BUBBLE INPUTS ------------------------------------- */
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 0.55rem 0.7rem;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: #15130f;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(20,18,14,0.65);
   color: var(--text);
-  font-family: inherit;
   font-size: 0.95rem;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.45);
+  transition: 0.25s ease;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 1px solid var(--accent-soft);
+  outline: none;
+  border-color: var(--leaf);
+  box-shadow: 0 0 12px rgba(61,214,92,0.4);
 }
 
-.price-note {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.form-message {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-.form-message.success {
-  color: var(--accent-soft);
-}
-
-.form-message.error {
-  color: var(--danger);
-}
-
-/* Gear */
-
-.gear-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.gear-item h3 {
-  margin-top: 0;
-}
-
-/* Lessons */
-
-.lesson-list {
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
+/* LESSON CARDS ---------------------------------------------- */
 
 .lesson-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 1rem;
-  border: 1px solid var(--border);
-}
-
-.lesson-card h3 {
-  margin-top: 0;
+  padding: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: var(--shadow-soft);
+  background-image: url('/img/textures/bark-mid.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 .lesson-type {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--leaf);
+  text-shadow: 0 0 8px rgba(61,214,92,0.5);
 }
 
-.muted {
-  color: var(--muted);
-}
-
-/* Tables */
-
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-.data-table th,
-.data-table td {
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.data-table th {
-  text-align: left;
-  color: var(--muted);
-}
-
-/* Code block */
-
-.code-block {
-  background: #11100d;
-  padding: 1rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  font-size: 0.85rem;
-  overflow-x: auto;
-}
-
-/* Footer */
+/* FOOTER ----------------------------------------------------- */
 
 .site-footer {
   padding: 1.5rem 5vw;
-  border-top: 1px solid var(--border);
-  background: rgba(10, 9, 7, 0.95);
-  font-size: 0.85rem;
+  background: rgba(20,18,14,0.85);
+  border-top: 1px solid rgba(255,255,255,0.05);
   color: var(--muted);
+  font-size: 0.85rem;
 }
 
-/* Admin */
-
-.admin-body {
-  background: radial-gradient(circle at top, #2f3b22 0, #050403 60%, #020201 100%);
-}
-
-.admin-main {
-  padding-bottom: 5rem;
-}
-
-.admin-header {
-  border-bottom-color: var(--accent-dark);
-}
-
-/* Responsive */
+/* RESPONSIVE ------------------------------------------------- */
 
 @media (max-width: 640px) {
   .site-header {
@@ -328,12 +263,7 @@ textarea:focus {
     gap: 0.5rem;
   }
 
-  .main-nav a {
-    margin-left: 0;
-    margin-right: 0.75rem;
-  }
-
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
