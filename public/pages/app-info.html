@@ -25,20 +25,23 @@
 
 <header class="site-header hero-header" style="
   background: url('/img/climb-about.jpg') center/cover no-repeat;
-  padding: 6rem 5vw;
+  padding: 6rem 5vw 7rem; /* extra bottom padding to extend image */
   text-align: center;
   color: #fff;
   position: relative;
   box-shadow: inset 0 0 120px rgba(0,0,0,0.7);
+  margin-bottom: -0.5in; /* pulls the image down visually by half an inch */
+  z-index: 2;
 ">
 
-  <!-- DARK OVERLAY BLOCK -->
   <div style="
     background: rgba(0,0,0,0.55);
     padding: 2rem;
     max-width: 700px;
     margin: 0 auto;
     border-radius: 12px;
+    position: relative;
+    z-index: 3;
   ">
     <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">The Tree Climbing Training App</h1>
     <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
@@ -49,11 +52,12 @@
 
 </header>
 
-<!-- MAIN CONTENT WITH DARK BACKING -->
 <main class="section" style="
   padding: 3rem 5vw;
   background: rgba(0,0,0,0.85);
   color: #fff;
+  position: relative;
+  z-index: 1;
 ">
 
   <h2>What’s Inside the App</h2>
