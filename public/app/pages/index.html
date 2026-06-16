@@ -4,9 +4,19 @@
   <meta charset="UTF-8" />
   <title>Chainsaw Climbing App — Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="stylesheet" href="/styles.css" />
   <script defer src="/app/js/app.js"></script>
+
+  <style>
+    /* Page-specific background */
+    body.admin-body {
+      background: url('/img/climb-index.jpg') center/cover no-repeat fixed;
+      background-color: #000; /* fallback */
+    }
+  </style>
 </head>
+
 <body class="admin-body">
 
 <header class="site-header">
@@ -14,6 +24,7 @@
     <span>🪚</span>
     <span class="logo-text">Chainsaw Climbing App</span>
   </div>
+
   <nav class="main-nav">
     <a href="/app/pages/index.html">Dashboard</a>
     <a href="/app/pages/lessons.html">Lessons</a>
@@ -35,16 +46,19 @@
       <p>Watch training videos and mark them complete.</p>
       <a href="/app/pages/lessons.html" class="btn-primary">Open Lessons</a>
     </div>
+
     <div class="card">
       <h2>Knots</h2>
       <p>Learn and review climbing knots.</p>
       <a href="/app/pages/knots.html" class="btn-primary">Open Knots</a>
     </div>
+
     <div class="card">
       <h2>Progress</h2>
       <p>See how many videos you’ve completed.</p>
       <a href="/app/pages/progress.html" class="btn-primary">View Progress</a>
     </div>
+
     <div class="card">
       <h2>Rewards</h2>
       <p>Every 5 videos = 30% off your next class.</p>
