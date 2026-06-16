@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chainsaw Climbing Lessons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script defer src="/js/app.js"></script>
+</head>
+<body class="admin-body">
+
+<header class="site-header">
+  <div class="logo">
+    <span>🪚</span>
+    <span class="logo-text">Chainsaw Climbing App</span>
+  </div>
+  <nav class="main-nav">
+    <a href="/app/pages/index.html">Dashboard</a>
+    <a href="/app/pages/lessons.html">Lessons</a>
+    <a href="/app/pages/knots.html">Knots</a>
+    <a href="/app/pages/progress.html">Progress</a>
+    <a href="/app/pages/rewards.html">Rewards</a>
+    <a href="/app/pages/schedule.html">Schedule</a>
+    <a href="/app/pages/account.html">Account</a>
+  </nav>
+</header>
+
+<main class="section">
+  <h1>Training Lessons</h1>
+  <p>Tap a lesson to watch. Completed lessons count toward your rewards.</p>
+
+  <div id="lessons-list" class="lesson-list">
+    <!-- JS will inject lesson cards here -->
+  </div>
+
+  <section class="section">
+    <h2>Video Player</h2>
+    <video id="lesson-player" controls width="100%" style="max-width: 720px;">
+      <source id="lesson-source" src="" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Chainsaw Climbing Class</p>
+</footer>
+
+</body>
+</html>
