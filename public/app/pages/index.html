@@ -9,10 +9,9 @@
   <script defer src="/app/js/app.js"></script>
 
   <style>
-    /* Page-specific background */
     body.admin-body {
       background: url('/img/climb-index.jpg') center/cover no-repeat fixed;
-      background-color: #000; /* fallback */
+      background-color: #000;
     }
   </style>
 </head>
@@ -38,32 +37,105 @@
 
 <main class="section">
   <h1>Chainsaw Climbing Dashboard</h1>
-  <p>Track your lessons, knots, progress, and rewards.</p>
+  <p>Select a training category to begin.</p>
 
+  <!-- TRAINING CATEGORIES -->
   <div class="grid-2">
+
+    <!-- Gear & Safety -->
     <div class="card">
-      <h2>Lessons</h2>
-      <p>Watch training videos and mark them complete.</p>
-      <a href="/app/pages/lessons.html" class="btn-primary">Open Lessons</a>
+      <h2>Gear & Safety</h2>
+      <ul>
+        <li>Gear Overview</li>
+        <li>How to Put Gear On</li>
+        <li>Understanding Your Lifeline</li>
+        <li>Two‑Point Safety Technique</li>
+        <li>Basic Movement & Positioning</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
     </div>
 
+    <!-- Throwball Mastery -->
+    <div class="card">
+      <h2>Throwball Mastery</h2>
+      <ul>
+        <li>Throwball Basics</li>
+        <li>Setting a Perfect Anchor</li>
+        <li>Advanced Throwline Techniques</li>
+        <li>High‑Accuracy Throws</li>
+        <li>Throwline Recovery</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
+    </div>
+
+    <!-- Climbing Styles -->
+    <div class="card">
+      <h2>Climbing Styles</h2>
+      <ul>
+        <li>Body Thrusting</li>
+        <li>Body Thrust Basics</li>
+        <li>Hip Thrust Efficiency</li>
+        <li>Footlocking</li>
+        <li>Footlock Fundamentals</li>
+        <li>Ascending Smoothly</li>
+        <li>Spiking</li>
+        <li>Spiking Basics</li>
+        <li>Safe Spike Ascending</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
+    </div>
+
+    <!-- Rigging -->
+    <div class="card">
+      <h2>Rigging</h2>
+      <ul>
+        <li>Rigging Gear Overview</li>
+        <li>Basic Rigging Setup</li>
+        <li>Rigging Knots</li>
+        <li>Rigging Cuts</li>
+        <li>Advanced Rigging Scenarios</li>
+        <li>Negative Rigging</li>
+        <li>Speedline Techniques</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
+    </div>
+
+    <!-- Knots -->
     <div class="card">
       <h2>Knots</h2>
-      <p>Learn and review climbing knots.</p>
+      <ul>
+        <li>Basic Arborist Knots</li>
+        <li>Friction Hitches</li>
+        <li>Rigging Knots</li>
+        <li>Advanced Knot Scenarios</li>
+      </ul>
       <a href="/app/pages/knots.html" class="btn-primary">Open Knots</a>
     </div>
 
+    <!-- Cutting Techniques -->
     <div class="card">
-      <h2>Progress</h2>
-      <p>See how many videos you’ve completed.</p>
-      <a href="/app/pages/progress.html" class="btn-primary">View Progress</a>
+      <h2>Cutting Techniques</h2>
+      <ul>
+        <li>Chainsaw Safety</li>
+        <li>Basic Cuts</li>
+        <li>Advanced Cuts</li>
+        <li>Scenario‑Based Cutting</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
     </div>
 
+    <!-- Business & Jobsite Flow -->
     <div class="card">
-      <h2>Rewards</h2>
-      <p>Every 5 videos = 30% off your next class.</p>
-      <a href="/app/pages/rewards.html" class="btn-primary">View Rewards</a>
+      <h2>Business & Jobsite Flow</h2>
+      <ul>
+        <li>How to Price Jobs</li>
+        <li>Jobsite Setup</li>
+        <li>Crew Communication</li>
+        <li>Customer Safety & Liability</li>
+      </ul>
+      <a href="/app/pages/lessons.html" class="btn-primary">Open Category</a>
     </div>
+
   </div>
 </main>
 
