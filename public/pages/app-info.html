@@ -5,8 +5,10 @@
   <title>About the Tree Climbing Training App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/img/favicon.png" />
 
+  <!-- Social Preview -->
   <meta property="og:title" content="Tree Climbing Training App" />
   <meta property="og:description" content="Track lessons, knots, progress, rewards, and unlock discounts with the Real Tree Guy Training App." />
   <meta property="og:image" content="/img/climb-about.jpg" />
@@ -23,17 +25,34 @@
 
 <body>
 
-<header class="site-header hero-header" style="
+<!-- FULL NAV -->
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-mark">🌲</span>
+    <span class="logo-text">Tree Climbing Class</span>
+  </div>
+
+  <nav class="main-nav">
+    <a href="/">Home</a>
+    <a href="/classes.html">Classes</a>
+    <a href="/gear.html">Gear</a>
+    <a href="/about.html" style="color: var(--accent-soft);">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/admin" class="admin-link">Admin</a>
+  </nav>
+</header>
+
+<!-- HERO WITH BACKGROUND -->
+<section class="hero-header" style="
   background: url('/img/climb-about.jpg') center/cover no-repeat;
-  padding: 6rem 5vw 7rem; /* extra bottom padding to extend image */
+  padding: 6rem 5vw 7rem;
   text-align: center;
   color: #fff;
   position: relative;
   box-shadow: inset 0 0 120px rgba(0,0,0,0.7);
-  margin-bottom: -0.5in; /* pulls the image down visually by half an inch */
+  margin-bottom: -0.5in;
   z-index: 2;
 ">
-
   <div style="
     background: rgba(0,0,0,0.55);
     padding: 2rem;
@@ -49,9 +68,9 @@
     </p>
     <a href="/app/pages/index.html" class="btn-primary">Open the App</a>
   </div>
+</section>
 
-</header>
-
+<!-- MAIN CONTENT -->
 <main class="section" style="
   padding: 3rem 5vw;
   background: rgba(0,0,0,0.85);
@@ -59,7 +78,6 @@
   position: relative;
   z-index: 1;
 ">
-
   <h2>What’s Inside the App</h2>
   <ul>
     <li>Video lessons</li>
@@ -82,9 +100,9 @@
 
   <h2>How Accounts Work</h2>
   <p>You sign up for a class on the website. Then you log into the app using your email. No password needed.</p>
-
 </main>
 
+<!-- FOOTER -->
 <footer style="text-align:center; padding:2rem; background:#000; color:#fff;">
   <p>&copy; 2026 Chainsaw’s Tree Climbing Class — All Rights Reserved.</p>
 </footer>
