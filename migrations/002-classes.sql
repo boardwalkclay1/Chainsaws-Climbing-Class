@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS classes (
+  id TEXT PRIMARY KEY,
+  date TEXT NOT NULL,
+  time TEXT NOT NULL,
+  type TEXT NOT NULL,
+  title TEXT NOT NULL,
+  price INTEGER NOT NULL,
+  max_spots INTEGER NOT NULL,
+  created_at TEXT NOT NULL
+);
