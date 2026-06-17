@@ -37,6 +37,7 @@
       background: rgba(0,0,0,0.65);
       min-height: 100vh;
       padding-bottom: 60px;
+      position: relative;
     }
 
     .site-header {
@@ -136,6 +137,18 @@
       padding: 30px 20px;
       opacity: 0.8;
       font-size: 14px;
+    }
+
+    /* 🐿️ Squirrel image bottom-right */
+    .squirrel-img {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 160px;
+      height: auto;
+      opacity: 0.95;
+      z-index: 10;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -260,8 +273,8 @@
   <p>Install the app from the App page to keep your training on your home screen.</p>
 </footer>
 
+<!-- 🐿️ Squirrel image -->
+<img src="/public/app/img/squirell-img.jpg" alt="Squirrel Illustration" class="squirrel-img" />
+
 </div>
 
-<script src="/js/site.js"></script>
-</body>
-</html>
