@@ -11,7 +11,7 @@
   <!-- Social Preview (OpenGraph) -->
   <meta property="og:title" content="Professional Tree Climbing Training" />
   <meta property="og:description" content="Learn knots, safety, gear, climbing styles, rigging, and real arborist techniques." />
-  <meta property="og:image" content="https://chainsaws-climbing-class.pages.dev/public/img/climbing-logo.jpg" />
+  <meta property="og:image" content="https://chainsaws-climbing-class.pages.dev/img/climbing-logo.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chainsaws-climbing-class.pages.dev/" />
 
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Professional Tree Climbing Training" />
   <meta name="twitter:description" content="Learn knots, safety, gear, climbing styles, rigging, and real arborist techniques." />
-  <meta name="twitter:image" content="https://chainsaws-climbing-class.pages.dev/public/img/climbing-logo.jpg" />
+  <meta name="twitter:image" content="https://chainsaws-climbing-class.pages.dev/img/climbing-logo.jpg" />
 
   <link rel="stylesheet" href="/styles.css" />
 
@@ -139,16 +139,48 @@
       font-size: 14px;
     }
 
-    /* 🐿️ Squirrel image bottom-right */
-    .squirrel-img {
+    /* 🐿️ Squirrel Helper Button */
+    #squirrelChatBtn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       width: 160px;
       height: auto;
-      opacity: 0.95;
-      z-index: 10;
-      pointer-events: none;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    /* 🐿️ Chatbox */
+    #squirrelChatBox {
+      position: fixed;
+      bottom: 200px;
+      right: 20px;
+      width: 320px;
+      background: rgba(0,0,0,0.92);
+      border: 2px solid #00c853;
+      border-radius: 12px;
+      padding: 15px;
+      display: none;
+      z-index: 9999;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+    }
+
+    #squirrelMessages {
+      height: 180px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding-right: 5px;
+    }
+
+    #squirrelInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -273,8 +305,25 @@
   <p>Install the app from the App page to keep your training on your home screen.</p>
 </footer>
 
-<!-- 🐿️ Squirrel image -->
-<img src="/app/img/squirell-img.jpg" alt="Squirrel Illustration" class="squirrel-img" />
-
 </div>
 
+<!-- 🐿️ Floating Squirrel Helper -->
+<img src="/app/img/squirell-img.jpg" id="squirrelChatBtn" alt="Helper Squirrel">
+
+<!-- Chatbox -->
+<div id="squirrelChatBox">
+  <div style="font-weight: bold; margin-bottom: 10px; font-size: 18px;">
+    🐿️ Helper Squirrel
+  </div>
+
+  <div id="squirrelMessages">
+    <div>Hey! I’m your Helper Squirrel. Ask me anything about knots, climbing techniques, business skills, the app, or account setup.</div>
+  </div>
+
+  <input id="squirrelInput" type="text" placeholder="Ask me something…">
+</div>
+
+<script src="/public/js/squirrel.js"></script>
+
+</body>
+</html>
