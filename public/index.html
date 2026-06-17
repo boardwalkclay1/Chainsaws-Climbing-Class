@@ -40,23 +40,15 @@
       position: relative;
     }
 
-    /* BURGER MENU */
-    .burger {
+    /* LOGO BURGER TRIGGER */
+    #logoTrigger {
       position: fixed;
       top: 20px;
       left: 20px;
-      width: 45px;
-      height: 35px;
+      width: 90px;
+      height: auto;
       cursor: pointer;
       z-index: 9999;
-    }
-
-    .burger div {
-      width: 100%;
-      height: 6px;
-      background: #fff;
-      margin: 6px 0;
-      border-radius: 4px;
     }
 
     /* SIDEBAR MENU */
@@ -88,7 +80,7 @@
 
     .site-header {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 120px 20px 40px;
     }
 
     .site-header h1 {
@@ -226,12 +218,8 @@
 </head>
 <body>
 
-<!-- BURGER MENU -->
-<div class="burger" onclick="toggleSidebar()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
+<!-- LOGO (BURGER TRIGGER) -->
+<img src="/climb-logo.jpg" id="logoTrigger" alt="Menu Logo" onclick="toggleSidebar()">
 
 <!-- SIDEBAR -->
 <div id="sidebar">
