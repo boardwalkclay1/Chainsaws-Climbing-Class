@@ -15,6 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yourdomain.com/about" />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tree Climbing Training App" />
   <meta name="twitter:description" content="Your full training system for climbing, knots, lessons, and progress tracking." />
@@ -42,11 +43,10 @@
   </nav>
 </header>
 
-<!-- HERO WITH BACKGROUND -->
+<!-- HERO -->
 <section class="hero-header" style="
   background: url('/img/climb-about.jpg') center/cover no-repeat;
   padding: 6rem 5vw 7rem;
-  text-align: center;
   color: #fff;
   position: relative;
   box-shadow: inset 0 0 120px rgba(0,0,0,0.7);
@@ -56,7 +56,7 @@
   <div style="
     background: rgba(0,0,0,0.55);
     padding: 2rem;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     border-radius: 12px;
     display: flex;
@@ -64,11 +64,10 @@
     justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 3;
   ">
+
     <!-- LEFT TEXT -->
-    <div style="flex: 1 1 400px; text-align: left;">
+    <div style="flex: 1 1 420px;">
       <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">The Tree Climbing Training App</h1>
       <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
         Track your lessons, knots, progress, and unlock climbing discounts.
@@ -76,15 +75,17 @@
       <a href="/app/pages/index.html" class="btn-primary">Open the App</a>
     </div>
 
-    <!-- RIGHT IMAGE -->
+    <!-- RIGHT KOALA IMAGE -->
     <div style="flex: 1 1 300px; text-align: center;">
-      <img src="/app/img/koala-img.jpg" alt="Koala climbing tree" style="
+      <img src="/app/img/koala-img.jpg" alt="Koala" style="
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
+        height: auto;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0,0,0,0.6);
-      " />
+      ">
     </div>
+
   </div>
 </section>
 
@@ -124,6 +125,63 @@
 <footer style="text-align:center; padding:2rem; background:#000; color:#fff;">
   <p>&copy; 2026 Chainsaw’s Tree Climbing Class — All Rights Reserved.</p>
 </footer>
+
+<!-- FLOATING SQUIRREL CHAT BUTTON -->
+<img src="/app/img/squirell-img.jpg" 
+     id="squirrelChatBtn"
+     style="
+       position: fixed;
+       bottom: 25px;
+       right: 25px;
+       width: 140px;
+       height: auto;
+       cursor: pointer;
+       z-index: 9999;
+     " />
+
+<!-- CHATBOX -->
+<div id="squirrelChatBox" style="
+  position: fixed;
+  bottom: 180px;
+  right: 25px;
+  width: 320px;
+  background: rgba(0,0,0,0.92);
+  border: 2px solid #00c853;
+  border-radius: 12px;
+  padding: 15px;
+  display: none;
+  z-index: 9999;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+">
+  <div style="font-weight: bold; margin-bottom: 10px; font-size: 18px;">
+    🐿️ Helper Squirrel
+  </div>
+
+  <div id="squirrelMessages" style="
+    height: 180px;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  ">
+    <div>Hey! I’m your Helper Squirrel. Ask me anything about classes, knots, gear, setup, or training.</div>
+  </div>
+
+  <input id="squirrelInput" 
+         type="text" 
+         placeholder="Ask me something…" 
+         style="
+           width: 100%;
+           padding: 10px;
+           border-radius: 8px;
+           border: none;
+           outline: none;
+           font-size: 14px;
+         ">
+</div>
+
+<script src="/app/js/squirrel.js"></script>
 
 </body>
 </html>
