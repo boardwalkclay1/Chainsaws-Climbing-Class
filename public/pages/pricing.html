@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/climb-logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="/climb-logo.jpg" />
 
   <!-- Social Preview -->
   <meta property="og:title" content="Tree Climbing Class Pricing" />
@@ -39,11 +39,26 @@
       align-items: center;
       justify-content: space-between;
       padding: 25px 30px;
+      background: rgba(0,0,0,0.6);
+      border-bottom: 2px solid #00c853;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
     }
 
     .logo img {
-      width: 120px;
+      width: 70px;
       height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .logo-mark {
+      font-size: 1.8rem;
     }
 
     /* BURGER MENU */
@@ -53,7 +68,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      cursor: pointer;
     }
 
     .burger div {
@@ -73,6 +87,7 @@
       padding: 30px;
       transition: 0.3s ease;
       z-index: 9999;
+      border-right: 2px solid #00c853;
     }
 
     #menuPanel a {
@@ -166,11 +181,12 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="logo">
+    <div class="logo" onclick="toggleMenu()">
       <img src="/climb-logo.jpg" alt="Logo">
+      <span class="logo-mark">🌲</span>
     </div>
 
-    <div class="burger" onclick="toggleMenu()">
+    <div class="burger">
       <div></div><div></div><div></div>
     </div>
   </header>
@@ -181,7 +197,7 @@
     <a href="/pages/classes.html">Classes</a>
     <a href="/pages/pricing.html">Pricing</a>
     <a href="/pages/app-info.html">About the App</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/pages/contact.html">Contact</a>
     <a href="/app/pages/index.html">Open Training App</a>
   </div>
 
@@ -222,7 +238,12 @@
         <li>Rigging & cutting techniques</li>
         <li>Business & jobsite flow</li>
       </ul>
-      <p>Every 5 videos you complete unlocks <strong>30% off</strong> a live class.</p>
+      <p>
+        Every 5 videos you complete unlocks 
+        <strong>10% off</strong> a live class.  
+        Rewards stack up to <strong>20% max</strong> per class  
+        and can only be used once per class.
+      </p>
     </div>
 
   </section>
