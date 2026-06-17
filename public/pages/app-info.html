@@ -56,17 +56,35 @@
   <div style="
     background: rgba(0,0,0,0.55);
     padding: 2rem;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
     position: relative;
     z-index: 3;
   ">
-    <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">The Tree Climbing Training App</h1>
-    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-      Track your lessons, knots, progress, and unlock climbing discounts.
-    </p>
-    <a href="/app/pages/index.html" class="btn-primary">Open the App</a>
+    <!-- LEFT TEXT -->
+    <div style="flex: 1 1 400px; text-align: left;">
+      <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">The Tree Climbing Training App</h1>
+      <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+        Track your lessons, knots, progress, and unlock climbing discounts.
+      </p>
+      <a href="/app/pages/index.html" class="btn-primary">Open the App</a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div style="flex: 1 1 300px; text-align: center;">
+      <img src="/app/img/koala-img.jpg" alt="Koala climbing tree" style="
+        width: 100%;
+        max-width: 280px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      " />
+    </div>
   </div>
 </section>
 
