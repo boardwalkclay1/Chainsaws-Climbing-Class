@@ -10,7 +10,7 @@ const squirrelMessages = document.getElementById("squirrelMessages");
 const squirrelInput = document.getElementById("squirrelInput");
 
 // Load JSON data
-fetch("/public/json/squirrel-data.json")
+fetch("/json/squirrel-data.json")
   .then(res => res.json())
   .then(data => squirrelData = data);
 
