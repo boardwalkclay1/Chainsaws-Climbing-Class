@@ -39,21 +39,46 @@
       align-items: center;
       justify-content: space-between;
       padding: 25px 30px;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       border-bottom: 2px solid #00c853;
     }
 
-    .logo {
+    .left-header {
       display: flex;
       align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
       cursor: pointer;
     }
 
     .logo img {
-      width: 120px; /* BIGGER LOGO */
+      width: 130px; /* BIGGER LOGO */
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00c853;
+      letter-spacing: 1px;
+    }
+
+    /* NAVIGATION */
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .top-nav a:hover {
+      color: #00c853;
     }
 
     /* MENU PANEL */
@@ -79,7 +104,6 @@
       border-bottom: 1px solid #333;
     }
 
-    /* CLOSE BUTTON */
     .close-btn {
       font-size: 28px;
       font-weight: bold;
@@ -171,9 +195,23 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="logo" onclick="toggleMenu()">
-      <img src="/climb-logo.jpg" alt="Logo">
+
+    <div class="left-header">
+      <div class="logo" onclick="toggleMenu()">
+        <img src="/climb-logo.jpg" alt="Logo">
+      </div>
+
+      <div class="site-title">Tree Climbing Class</div>
     </div>
+
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/pages/classes.html">Classes</a>
+      <a href="/pages/pricing.html">Pricing</a>
+      <a href="/pages/app-info.html">About</a>
+      <a href="/pages/contact.html">Contact</a>
+    </nav>
+
   </header>
 
   <!-- MENU PANEL -->
