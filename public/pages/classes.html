@@ -27,7 +27,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('/img/climb-classes.jpg') no-repeat center center fixed;
+      background: url('/public/img/climb-classes.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: system-ui, sans-serif;
       color: #fff;
@@ -39,24 +39,34 @@
       padding: 40px 20px;
     }
 
+    /* CALENDAR WRAPPER */
+    .calendar-wrapper {
+      background: rgba(0,0,0,0.75);
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid #ff7b00;
+      margin-bottom: 30px;
+    }
+
     .calendar-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 8px;
-      margin-bottom: 20px;
+      margin-top: 10px;
     }
 
     .calendar-day {
-      padding: 10px;
+      padding: 12px;
       background: rgba(0,0,0,0.6);
       border-radius: 6px;
       text-align: center;
       cursor: pointer;
+      border: 2px solid #ff7b00;
       transition: 0.2s;
     }
 
     .calendar-day:hover {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
     }
 
     .calendar-day.has-class {
@@ -75,10 +85,6 @@
       padding: 15px;
       margin-bottom: 10px;
       border: 1px solid #333;
-    }
-
-    .class-card h3 {
-      margin: 0 0 5px;
     }
 
     .signup-form {
@@ -119,11 +125,6 @@
       color: #fff;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
-
-    .site-header a.btn {
-      margin-top: 10px;
-      display: inline-block;
-    }
   </style>
 </head>
 
@@ -136,17 +137,21 @@
 </header>
 
 <main class="section">
-  <section>
+
+  <!-- CALENDAR -->
+  <section class="calendar-wrapper">
     <h2>Select a Date</h2>
     <div id="calendarHeader"></div>
     <div id="calendarGrid" class="calendar-grid"></div>
   </section>
 
+  <!-- CLASS LIST -->
   <section>
     <h2>Available Classes</h2>
     <div id="classesList"></div>
   </section>
 
+  <!-- SIGNUP FORM -->
   <section class="signup-form">
     <h2>Sign Up for a Class</h2>
     <p id="selectedClassLabel">No class selected yet.</p>
@@ -157,12 +162,14 @@
     <select id="signupType">
       <option value="group">Group Class ($80)</option>
       <option value="personal">Personal 1-on-1 ($200/hr)</option>
+      <option value="private">Private 1-on-1 Class ($200/hr)</option>
     </select>
 
     <button class="btn-primary" id="signupSubmit">Reserve Spot</button>
     <p id="signupStatus"></p>
   </section>
 
+  <!-- WHAT YOU LEARN -->
   <section>
     <h2>What You’ll Learn</h2>
     <ul>
@@ -172,6 +179,7 @@
       <li>Real climbing techniques</li>
     </ul>
   </section>
+
 </main>
 
 <script src="/js/classes.js"></script>
