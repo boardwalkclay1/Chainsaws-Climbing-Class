@@ -1,0 +1,65 @@
+{
+  "intro": [
+    "Hey! I’m your Helper Squirrel. I can guide you through the website, the training app, knots, climbing techniques, business lessons, and how to set up your account.",
+    "Need help finding something? Just ask me what you want to learn."
+  ],
+
+  "website_info": [
+    "This website is your full hub for tree climbing training. You can explore classes, learn about the app, check gear, and get direct help from me anytime.",
+    "If you're new, start with the About page — it explains everything you get with the training system."
+  ],
+
+  "app_info": [
+    "The training app gives you lifetime access to lessons, knots, climbing techniques, and business training.",
+    "You log in using your email — no password needed. The app tracks your progress automatically.",
+    "You can install the app on iPhone, Android, or desktop. Just open the app page and follow the install instructions."
+  ],
+
+  "account_setup": [
+    "To set up your account, go to the App page and enter your email. You’ll get a login link — no password required.",
+    "Once you're in, you can access all your lessons, knots, and climbing techniques anytime."
+  ],
+
+  "install_app": [
+    "iPhone: Tap the share icon → Add to Home Screen.",
+    "Android: Tap the menu (⋮) → Install App.",
+    "Desktop: Click the install icon in the address bar."
+  ],
+
+  "knots": [
+    "Blake’s Hitch — used for climbing on a moving rope system. Reliable, smooth, and easy to adjust.",
+    "Prusik — used for backups, rescues, and friction hitch climbing.",
+    "Running Bowline — perfect for securing limbs during rigging.",
+    "Alpine Butterfly — creates a strong mid‑line loop for redirects.",
+    "Munter Hitch — used for lowering and controlled descent.",
+    "Bowline — fast, strong, and essential for everyday tree work."
+  ],
+
+  "climbing_techniques": [
+    "SRS (Stationary Rope System) — efficient for long ascents and modern climbing.",
+    "MRS (Moving Rope System) — classic arborist climbing, great for limb walking.",
+    "Footlocking — fast vertical ascent technique using rope friction.",
+    "Rope Walking — smooth, efficient, and low‑energy climbing.",
+    "Spur Climbing — used for removals and spar work.",
+    "Limb Walking — essential for pruning and canopy movement.",
+    "Redirects — used to position yourself safely and efficiently in the tree."
+  ],
+
+  "business": [
+    "Pricing Jobs — learn how to estimate based on time, risk, and cleanup.",
+    "Customer Communication — how to explain the job clearly and professionally.",
+    "Jobsite Flow — setting up ropes, gear, and crew positions for efficiency.",
+    "Crew Leadership — keeping everyone safe and productive.",
+    "Liability & Safety — protecting yourself and the customer.",
+    "Real‑World Examples — storm damage, removals, pruning, and emergency work."
+  ],
+
+  "links": {
+    "home": "/",
+    "classes": "/pages/classes.html",
+    "about": "/pages/app-info.html",
+    "app": "/app/pages/index.html",
+    "contact": "/contact.html",
+    "account": "/app/pages/account.html"
+  }
+}
