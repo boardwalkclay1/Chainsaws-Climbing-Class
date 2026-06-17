@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact — Tree Climbing Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/climb-logo.jpg" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Contact — Tree Climbing Training" />
+  <meta property="og:description" content="Get in touch for classes, training questions, app support, or business inquiries." />
+  <meta property="og:image" content="/img/climb-index.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chainsaws-climbing-class.pages.dev/contact.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Tree Climbing Training" />
+  <meta name="twitter:description" content="Reach out for support, class info, or training questions." />
+  <meta name="twitter:image" content="/img/climb-index.jpg" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/img/climb-index.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.75);
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    h1, h2 {
+      color: #00c853;
+    }
+
+    .contact-section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: rgba(0,0,0,0.55);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #00c853;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    button {
+      background: #00c853;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* LOGO BURGER TRIGGER */
+    #logoTrigger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 90px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    /* SIDEBAR */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      padding: 30px;
+      transition: 0.3s ease;
+      z-index: 9998;
+      border-right: 2px solid #00c853;
+    }
+
+    #sidebar a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
+    }
+
+    #sidebar.open {
+      left: 0;
+    }
+
+    /* SQUIRREL */
+    #squirrelChatBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 160px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    #squirrelChatBox {
+      position: fixed;
+      bottom: 200px;
+      right: 20px;
+      width: 320px;
+      background: rgba(0,0,0,0.92);
+      border: 2px solid #00c853;
+      border-radius: 12px;
+      padding: 15px;
+      display: none;
+      z-index: 9999;
+      color: #fff;
+    }
+
+    #squirrelMessages {
+      height: 180px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    #squirrelInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- LOGO (BURGER TRIGGER) -->
+<img src="/climb-logo.jpg" id="logoTrigger" alt="Menu Logo" onclick="toggleSidebar()">
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <a href="/">Home</a>
+  <a href="/pages/classes.html">Classes & Pricing</a>
+  <a href="/pages/app-info.html">About the App</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy Agreement</a>
+</div>
+
+<script>
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
+</script>
+
+<div class="overlay">
+
+  <h1>Contact Us</h1>
+  <p style="max-width:900px;margin:0 auto 30px;">
+    Have questions about classes, the training app, your account, or business inquiries?  
+    Reach out anytime — we respond as quickly as possible.
+  </p>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-section">
+    <h2>Send a Message</h2>
+
+    <form action="https://formspree.io/f/mwkzqzpq" method="POST">
+      <label>Your Name</label>
+      <input type="text" name="name" required>
+
+      <label>Your Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- DIRECT CONTACT -->
+  <div class="contact-section">
+    <h2>Direct Contact</h2>
+    <p><strong>Email:</strong> boardwalkclay1@gmail.com</p>
+    <p><strong>Phone:</strong> 678‑683‑0570</p>
+    <p><strong>Business:</strong> Chainsaw Clay’s Tree Service LLC</p>
+  </div>
+
+  <!-- LEGAL -->
+  <div class="contact-section">
+    <h2>Important Information</h2>
+    <ul>
+      <li>Your email is used only for replies, class communication, and app login.</li>
+      <li>We do not store passwords — login is email‑based only.</li>
+      <li>Messages sent through this form are encrypted and secure.</li>
+      <li>We do not sell or share your information with third parties.</li>
+      <li>For full details, read our <a href="/privacy.html">Privacy Agreement</a>.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- SQUIRREL -->
+<img src="/app/img/squirell-img.jpg" id="squirrelChatBtn" alt="Helper Squirrel">
+
+<div id="squirrelChatBox">
+  <div style="font-weight:bold;margin-bottom:10px;font-size:18px;">🐿️ Helper Squirrel</div>
+  <div id="squirrelMessages">
+    <div>Need help contacting us? I can explain how messages work, what info we need, or how fast we reply.</div>
+  </div>
+  <input id="squirrelInput" type="text" placeholder="Ask me something…">
+</div>
+
+<script src="/js/squirrel.js"></script>
+
+</body>
+</html>
