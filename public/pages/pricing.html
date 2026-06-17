@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Training Prices — Tree Climbing Classes & Courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/climb-logo.jpg" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Tree Climbing Class Pricing" />
+  <meta property="og:description" content="See prices for group classes, personal sessions, and digital training courses." />
+  <meta property="og:image" content="/img/pricing.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/img/pricing.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.70);
+      min-height: 100vh;
+      padding-bottom: 60px;
+      position: relative;
+    }
+
+    /* HEADER */
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 30px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    /* BURGER MENU */
+    .burger {
+      width: 35px;
+      height: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .burger div {
+      height: 5px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    /* MENU PANEL */
+    #menuPanel {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      padding: 30px;
+      transition: 0.3s ease;
+      z-index: 9999;
+    }
+
+    #menuPanel a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
+    }
+
+    /* PRICING SECTIONS */
+    .pricing-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .pricing-card {
+      background: rgba(0,0,0,0.55);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      margin-bottom: 25px;
+    }
+
+    .pricing-card h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: bold;
+      color: #00c853;
+      margin-bottom: 10px;
+    }
+
+    .pricing-card ul {
+      padding-left: 20px;
+    }
+
+    /* SQUIRREL */
+    #squirrelChatBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 160px;
+      height: auto;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    #squirrelChatBox {
+      position: fixed;
+      bottom: 200px;
+      right: 20px;
+      width: 320px;
+      background: rgba(0,0,0,0.92);
+      border: 2px solid #00c853;
+      border-radius: 12px;
+      padding: 15px;
+      display: none;
+      z-index: 9999;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+    }
+
+    #squirrelMessages {
+      height: 180px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding-right: 5px;
+    }
+
+    #squirrelInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="/climb-logo.jpg" alt="Logo">
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- MENU PANEL -->
+  <div id="menuPanel">
+    <a href="/">Home</a>
+    <a href="/pages/classes.html">Classes</a>
+    <a href="/pages/pricing.html">Pricing</a>
+    <a href="/pages/app-info.html">About the App</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/app/pages/index.html">Open Training App</a>
+  </div>
+
+  <!-- PRICING CONTENT -->
+  <section class="pricing-section">
+
+    <div class="pricing-card">
+      <h2>Group Climbing Class</h2>
+      <div class="price">$80</div>
+      <ul>
+        <li>Gear setup & safety</li>
+        <li>Throwline & anchor setting</li>
+        <li>Basic climbing techniques</li>
+        <li>Movement & positioning</li>
+        <li>Real‑tree climbing practice</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Personal 1‑on‑1 Training</h2>
+      <div class="price">$200/hr</div>
+      <ul>
+        <li>Advanced climbing systems</li>
+        <li>Rigging & lowering</li>
+        <li>Chainsaw technique</li>
+        <li>Business coaching</li>
+        <li>Real‑world jobsite scenarios</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Digital Training Courses</h2>
+      <div class="price">Included in App</div>
+      <ul>
+        <li>Knots & friction hitches</li>
+        <li>Climbing techniques (SRS, MRS, footlocking, rope walking)</li>
+        <li>Gear & safety fundamentals</li>
+        <li>Rigging & cutting techniques</li>
+        <li>Business & jobsite flow</li>
+      </ul>
+      <p>Every 5 videos you complete unlocks <strong>30% off</strong> a live class.</p>
+    </div>
+
+  </section>
+
+</div>
+
+<!-- SQUIRREL -->
+<img src="/app/img/squirell-img.jpg" id="squirrelChatBtn" alt="Helper Squirrel">
+
+<div id="squirrelChatBox">
+  <div style="font-weight: bold; margin-bottom: 10px; font-size: 18px;">
+    🐿️ Helper Squirrel
+  </div>
+
+  <div id="squirrelMessages">
+    <div>Hey! I can explain pricing, classes, courses, and how everything works. Ask me anything!</div>
+  </div>
+
+  <input id="squirrelInput" type="text" placeholder="Ask me something…">
+</div>
+
+<script>
+  function toggleMenu() {
+    const panel = document.getElementById("menuPanel");
+    panel.style.left = panel.style.left === "0px" ? "-260px" : "0px";
+  }
+</script>
+
+<script src="/public/js/squirrel.js"></script>
+
+</body>
+</html>
