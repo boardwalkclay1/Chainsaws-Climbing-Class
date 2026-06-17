@@ -4,13 +4,39 @@
   <meta charset="UTF-8" />
   <title>Class Schedule & Openings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/climb-logo.jpg" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Tree Climbing Class Schedule" />
+  <meta property="og:description" content="See upcoming tree climbing classes, openings, and sign up instantly." />
+  <meta property="og:image" content="https://chainsaws-climbing-class.pages.dev/public/img/climb-classes.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chainsaws-climbing-class.pages.dev/pages/classes.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tree Climbing Class Schedule" />
+  <meta name="twitter:description" content="See upcoming tree climbing classes, openings, and sign up instantly." />
+  <meta name="twitter:image" content="https://chainsaws-climbing-class.pages.dev/public/img/climb-classes.jpg" />
+
   <link rel="stylesheet" href="/styles.css" />
+
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/public/img/climb-classes.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: system-ui, sans-serif;
+      color: #fff;
+    }
+
     .section {
       max-width: 1000px;
       margin: 0 auto;
       padding: 40px 20px;
-      color: #fff;
     }
 
     .calendar-grid {
@@ -26,6 +52,11 @@
       border-radius: 6px;
       text-align: center;
       cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .calendar-day:hover {
+      background: rgba(0,0,0,0.8);
     }
 
     .calendar-day.has-class {
@@ -43,6 +74,7 @@
       border-radius: 8px;
       padding: 15px;
       margin-bottom: 10px;
+      border: 1px solid #333;
     }
 
     .class-card h3 {
@@ -51,9 +83,10 @@
 
     .signup-form {
       margin-top: 25px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.75);
       padding: 20px;
       border-radius: 8px;
+      border: 1px solid #333;
     }
 
     .signup-form input,
@@ -64,6 +97,7 @@
       border-radius: 6px;
       border: none;
       outline: none;
+      font-size: 16px;
     }
 
     .btn-primary {
@@ -76,12 +110,14 @@
       text-decoration: none;
       border: none;
       cursor: pointer;
+      font-size: 16px;
     }
 
     .site-header {
       text-align: center;
       padding: 30px 20px;
       color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
 
     .site-header a.btn {
@@ -90,6 +126,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -116,6 +153,7 @@
 
     <input type="text" id="signupName" placeholder="Your Name" />
     <input type="email" id="signupEmail" placeholder="Your Email" />
+
     <select id="signupType">
       <option value="group">Group Class ($80)</option>
       <option value="personal">Personal 1-on-1 ($200/hr)</option>
