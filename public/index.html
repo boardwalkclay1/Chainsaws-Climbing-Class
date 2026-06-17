@@ -40,15 +40,55 @@
       position: relative;
     }
 
-    .site-header {
-      text-align: center;
-      padding: 60px 20px 40px;
+    /* BURGER MENU */
+    .burger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 45px;
+      height: 35px;
+      cursor: pointer;
+      z-index: 9999;
     }
 
-    .site-header img {
-      width: 140px;
-      height: auto;
-      margin-bottom: 20px;
+    .burger div {
+      width: 100%;
+      height: 6px;
+      background: #fff;
+      margin: 6px 0;
+      border-radius: 4px;
+    }
+
+    /* SIDEBAR MENU */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      padding: 30px;
+      transition: 0.3s ease;
+      z-index: 9998;
+      border-right: 2px solid #00c853;
+    }
+
+    #sidebar a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
+    }
+
+    #sidebar.open {
+      left: 0;
+    }
+
+    .site-header {
+      text-align: center;
+      padding: 80px 20px 40px;
     }
 
     .site-header h1 {
@@ -186,19 +226,47 @@
 </head>
 <body>
 
+<!-- BURGER MENU -->
+<div class="burger" onclick="toggleSidebar()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <a href="/">Home</a>
+  <a href="/pages/classes.html">Classes & Pricing ($80 / $200hr)</a>
+  <a href="/pages/app-info.html">About the App</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy Agreement</a>
+</div>
+
+<script>
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
+</script>
+
 <div class="overlay">
 
 <header class="site-header">
-  <img src="/climb-logo.jpg" alt="Climbing Logo" />
   <h1>Professional Tree Climbing Training</h1>
   <p>Learn knots, safety, gear, climbing styles, rigging, and real arborist techniques.</p>
 
   <div class="header-buttons">
-    <a href="/pages/classes.html" class="btn primary">View Class Schedule</a>
+    <a href="/pages/classes.html" class="btn primary">View Class Pricing</a>
     <a href="/pages/app-info.html" class="btn secondary">About the App</a>
     <a href="/app/pages/index.html" class="btn secondary">Open Training App</a>
   </div>
 </header>
+
+<section class="section">
+  <h2>Class Pricing</h2>
+  <p><strong>Group Class:</strong> $80</p>
+  <p><strong>Personal 1‑on‑1 Session:</strong> $200/hr</p>
+  <p><a href="/pages/classes.html" style="color:#00c853;">View full class details →</a></p>
+</section>
 
 <section class="section">
   <h2>Start Training Before Class</h2>
@@ -317,7 +385,7 @@
   </div>
 
   <div id="squirrelMessages">
-    <div>Hey! I’m your Helper Squirrel. Ask me anything about knots, climbing techniques, business skills, the app, or account setup.</div>
+    <div>Hey! I’m your Helper Squirrel. Ask me anything about classes, pricing, knots, climbing techniques, business skills, the app, or account setup.</div>
   </div>
 
   <input id="squirrelInput" type="text" placeholder="Ask me something…">
