@@ -5,17 +5,125 @@
   <title>Class Schedule & Openings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #fff;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .calendar-day {
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 6px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .calendar-day.has-class {
+      border: 2px solid #00c853;
+    }
+
+    .calendar-day.selected {
+      background: #00c853;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .class-card {
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .class-card h3 {
+      margin: 0 0 5px;
+    }
+
+    .signup-form {
+      margin-top: 25px;
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .signup-form input,
+    .signup-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #00c853;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .site-header {
+      text-align: center;
+      padding: 30px 20px;
+      color: #fff;
+    }
+
+    .site-header a.btn {
+      margin-top: 10px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
 
 <header class="site-header">
   <h1>Upcoming Classes</h1>
   <p>See openings and sign up instantly.</p>
-  <a href="/public/pages/index.html" class="btn secondary">Back to Home</a>
+  <a href="/" class="btn secondary">Back to Home</a>
 </header>
 
 <main class="section">
-  <div id="classesList"></div>
+  <section>
+    <h2>Select a Date</h2>
+    <div id="calendarHeader"></div>
+    <div id="calendarGrid" class="calendar-grid"></div>
+  </section>
+
+  <section>
+    <h2>Available Classes</h2>
+    <div id="classesList"></div>
+  </section>
+
+  <section class="signup-form">
+    <h2>Sign Up for a Class</h2>
+    <p id="selectedClassLabel">No class selected yet.</p>
+
+    <input type="text" id="signupName" placeholder="Your Name" />
+    <input type="email" id="signupEmail" placeholder="Your Email" />
+    <select id="signupType">
+      <option value="group">Group Class ($80)</option>
+      <option value="personal">Personal 1-on-1 ($200/hr)</option>
+    </select>
+
+    <button class="btn-primary" id="signupSubmit">Reserve Spot</button>
+    <p id="signupStatus"></p>
+  </section>
 
   <section>
     <h2>What You’ll Learn</h2>
@@ -28,6 +136,6 @@
   </section>
 </main>
 
-<script src="/public/js/site.js"></script>
+<script src="/public/js/classes.js"></script>
 </body>
 </html>
