@@ -5,15 +5,7 @@
   <title>Training Prices — Tree Climbing Classes & Courses</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="/climb-logo.jpg" />
-
-  <!-- Social Preview -->
-  <meta property="og:title" content="Tree Climbing Class Pricing" />
-  <meta property="og:description" content="See prices for group classes, personal sessions, and digital training courses." />
-  <meta property="og:image" content="/img/pricing.jpg" />
-  <meta property="og:type" content="website" />
-
   <link rel="stylesheet" href="/styles.css" />
 
   <style>
@@ -54,7 +46,7 @@
     }
 
     .logo img {
-      width: 130px; /* BIGGER LOGO */
+      width: 130px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.6);
@@ -207,7 +199,7 @@
     <nav class="top-nav">
       <a href="/">Home</a>
       <a href="/pages/classes.html">Classes</a>
-      <a href="/pages/pricing.html">Pricing</a>
+      <a href="/pages/pricing.html" style="color:#00c853;">Pricing</a>
       <a href="/pages/app-info.html">About</a>
       <a href="/pages/contact.html">Contact</a>
     </nav>
@@ -229,6 +221,7 @@
   <!-- PRICING CONTENT -->
   <section class="pricing-section">
 
+    <!-- $80 GROUP CLASS -->
     <div class="pricing-card">
       <h2>Group Climbing Class</h2>
       <div class="price">$80</div>
@@ -241,18 +234,64 @@
       </ul>
     </div>
 
+    <!-- $200 PERSONAL -->
     <div class="pricing-card">
       <h2>Personal 1‑on‑1 Training</h2>
       <div class="price">$200/hr</div>
       <ul>
         <li>Advanced climbing systems</li>
         <li>Rigging & lowering</li>
-        <li>Chainsaw technique</li>
+        <li>Chainsaw technique overview</li>
         <li>Business coaching</li>
         <li>Real‑world jobsite scenarios</li>
       </ul>
     </div>
 
+    <!-- $500 CLASS -->
+    <div class="pricing-card">
+      <h2>Beginner Gear + Climbing Package</h2>
+      <div class="price">$500</div>
+      <ul>
+        <li>Includes: Harness, climbing rope, carabiners</li>
+        <li>How to body thrust safely</li>
+        <li>How to rappel safely</li>
+        <li>How to use your gear correctly</li>
+        <li>Hands‑on real tree climbing</li>
+      </ul>
+    </div>
+
+    <!-- $700 CLASS -->
+    <div class="pricing-card">
+      <h2>Intermediate Gear + Technique Package</h2>
+      <div class="price">$700</div>
+      <ul>
+        <li>Includes: Harness, lifeline rope, 2 buckstraps, carabiners</li>
+        <li>Everything from the $500 class</li>
+        <li>Footlocking technique</li>
+        <li>Alternate lanyard technique</li>
+        <li>Advanced movement & positioning</li>
+      </ul>
+    </div>
+
+    <!-- $1000 CLASS -->
+    <div class="pricing-card">
+      <h2>Full Arborist Package (Gear + Business)</h2>
+      <div class="price">$1000</div>
+      <ul>
+        <li>Includes: Harness, lifeline rope, 2 buckstraps, carabiners, spikes</li>
+        <li>Everything from the $500 & $700 classes</li>
+        <li>How to spike a tree safely</li>
+        <li>When to spike and when NOT to spike</li>
+        <li>How to land tree jobs</li>
+        <li>Business training & pricing strategy</li>
+      </ul>
+      <p>
+        Add a chainsaw for <strong>$200 extra</strong>  
+        (includes safe cutting fundamentals & jobsite workflow).
+      </p>
+    </div>
+
+    <!-- DIGITAL TRAINING -->
     <div class="pricing-card">
       <h2>Digital Training Courses</h2>
       <div class="price">Included in App</div>
@@ -273,21 +312,6 @@
 
   </section>
 
-</div>
-
-<!-- SQUIRREL -->
-<img src="/app/img/squirell-img.jpg" id="squirrelChatBtn" alt="Helper Squirrel">
-
-<div id="squirrelChatBox">
-  <div style="font-weight: bold; margin-bottom: 10px; font-size: 18px;">
-    🐿️ Helper Squirrel
-  </div>
-
-  <div id="squirrelMessages">
-    <div>Hey! I can explain pricing, classes, courses, and how everything works. Ask me anything!</div>
-  </div>
-
-  <input id="squirrelInput" type="text" placeholder="Ask me something…">
 </div>
 
 <script>
