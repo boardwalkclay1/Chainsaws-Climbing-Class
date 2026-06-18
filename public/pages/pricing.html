@@ -136,6 +136,27 @@
       padding-left: 20px;
     }
 
+    /* DROPDOWNS */
+    details {
+      background: rgba(0,0,0,0.45);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+
+    summary {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00c853;
+      cursor: pointer;
+    }
+
+    summary:hover {
+      opacity: 0.8;
+    }
+
     /* SQUIRREL */
     #squirrelChatBtn {
       position: fixed;
@@ -159,7 +180,6 @@
       display: none;
       z-index: 9999;
       color: #fff;
-      font-family: system-ui, sans-serif;
     }
 
     #squirrelMessages {
@@ -221,7 +241,7 @@
   <!-- PRICING CONTENT -->
   <section class="pricing-section">
 
-    <!-- $80 GROUP CLASS -->
+    <!-- LIVE CLASSES -->
     <div class="pricing-card">
       <h2>Group Climbing Class</h2>
       <div class="price">$80</div>
@@ -234,7 +254,6 @@
       </ul>
     </div>
 
-    <!-- $200 PERSONAL -->
     <div class="pricing-card">
       <h2>Personal 1‑on‑1 Training</h2>
       <div class="price">$200/hr</div>
@@ -247,66 +266,82 @@
       </ul>
     </div>
 
-    <!-- $500 CLASS -->
     <div class="pricing-card">
-      <h2>Beginner Gear + Climbing Package</h2>
+      <h2>$500 Beginner Gear + Climbing Package</h2>
       <div class="price">$500</div>
       <ul>
-        <li>Includes: Harness, climbing rope, carabiners</li>
-        <li>How to body thrust safely</li>
-        <li>How to rappel safely</li>
-        <li>How to use your gear correctly</li>
-        <li>Hands‑on real tree climbing</li>
+        <li>Harness, rope, carabiners included</li>
+        <li>Body thrusting</li>
+        <li>Rappelling</li>
+        <li>Safe gear usage</li>
       </ul>
     </div>
 
-    <!-- $700 CLASS -->
     <div class="pricing-card">
-      <h2>Intermediate Gear + Technique Package</h2>
+      <h2>$700 Intermediate Gear + Technique Package</h2>
       <div class="price">$700</div>
       <ul>
-        <li>Includes: Harness, lifeline rope, 2 buckstraps, carabiners</li>
-        <li>Everything from the $500 class</li>
-        <li>Footlocking technique</li>
+        <li>Harness, lifeline rope, 2 buckstraps, carabiners</li>
+        <li>Everything from the $500 package</li>
+        <li>Footlocking</li>
         <li>Alternate lanyard technique</li>
-        <li>Advanced movement & positioning</li>
       </ul>
     </div>
 
-    <!-- $1000 CLASS -->
     <div class="pricing-card">
-      <h2>Full Arborist Package (Gear + Business)</h2>
+      <h2>$1000 Full Arborist Package</h2>
       <div class="price">$1000</div>
       <ul>
-        <li>Includes: Harness, lifeline rope, 2 buckstraps, carabiners, spikes</li>
-        <li>Everything from the $500 & $700 classes</li>
-        <li>How to spike a tree safely</li>
-        <li>When to spike and when NOT to spike</li>
+        <li>Harness, lifeline rope, 2 buckstraps, carabiners, spikes</li>
+        <li>Everything from the $500 & $700 packages</li>
+        <li>Safe spiking technique</li>
+        <li>When to spike & when NOT to</li>
         <li>How to land tree jobs</li>
-        <li>Business training & pricing strategy</li>
+        <li>Business training</li>
       </ul>
-      <p>
-        Add a chainsaw for <strong>$200 extra</strong>  
-        (includes safe cutting fundamentals & jobsite workflow).
-      </p>
+      <p>Add a chainsaw for <strong>$200 extra</strong>.</p>
     </div>
 
     <!-- DIGITAL TRAINING -->
     <div class="pricing-card">
       <h2>Digital Training Courses</h2>
-      <div class="price">Included in App</div>
-      <ul>
-        <li>Knots & friction hitches</li>
-        <li>Climbing techniques (SRS, MRS, footlocking, rope walking)</li>
-        <li>Gear & safety fundamentals</li>
-        <li>Rigging & cutting techniques</li>
-        <li>Business & jobsite flow</li>
-      </ul>
-      <p>
-        Every 5 videos you complete unlocks 
-        <strong>10% off</strong> a live class.  
-        Rewards stack up to <strong>20% max</strong> per class  
-        and can only be used once per class.
+
+      <details>
+        <summary>Basic Access — $20/month</summary>
+        <ul>
+          <li>All beginner lessons</li>
+          <li>Knots & friction hitches</li>
+          <li>Gear fundamentals</li>
+          <li>Progress tracking</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Pro Access — $49/month</summary>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Intermediate climbing lessons</li>
+          <li>Rigging fundamentals</li>
+          <li>Throwline mastery</li>
+          <li>Unlocks 10% class discounts every 5 videos</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Elite Access — $99/month</summary>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Advanced climbing systems</li>
+          <li>Business & pricing lessons</li>
+          <li>Cutting & jobsite flow modules</li>
+          <li>Exclusive premium videos</li>
+          <li>Priority support</li>
+        </ul>
+      </details>
+
+      <p style="margin-top:15px;">
+        Every 5 videos you complete unlocks <strong>10% off</strong> a live class  
+        (up to <strong>20% max</strong> per class).
       </p>
     </div>
 
