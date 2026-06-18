@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment Successful</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .box {
+      max-width: 500px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #00c853;
+    }
+
+    h1 {
+      color: #00c853;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #00c853;
+      color: #000;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Payment Successful</h1>
+  <p id="msg">Processing your purchase…</p>
+
+  <a href="/" class="btn">Return Home</a>
+</div>
+
+<script>
+/* ---------------------------
+   1. READ URL PARAMETERS
+----------------------------*/
+function getParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+
+const item = getParam("item");     // what they bought
+const price = getParam("price");   // how much they paid
+const email = getParam("email");   // optional but recommended
+
+/* ---------------------------
+   2. UPDATE UI
+----------------------------*/
+document.getElementById("msg").innerText =
+  `Your purchase of "${item}" has been confirmed.`;
+
+/* ---------------------------
+   3. SAVE PURCHASE LOCALLY
+   (unlocks content in the app)
+----------------------------*/
+let owned = JSON.parse(localStorage.getItem("ownedItems") || "[]");
+
+if (!owned.includes(item)) {
+  owned.push(item);
+  localStorage.setItem("ownedItems", JSON.stringify(owned));
+}
+
+/* ---------------------------
+   4. SEND PURCHASE TO DATABASE
+   (Cloudflare Worker endpoint)
+----------------------------*/
+fetch("https://YOUR-WORKER-URL/purchase", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    item: item,
+    price: price,
+    email: email,
+    timestamp: Date.now()
+  })
+})
+.then(res => res.text())
+.then(data => console.log("Saved:", data))
+.catch(err => console.error("Error:", err));
+
+</script>
+
+</body>
+</html>
